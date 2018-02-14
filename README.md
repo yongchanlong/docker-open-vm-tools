@@ -1,2 +1,2 @@
-# open-vm-tools
+# docker-open-vm-tools
 Mini version
