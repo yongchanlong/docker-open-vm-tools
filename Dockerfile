@@ -12,7 +12,7 @@ RUN apk update \
     # can't get ttys unless you run the container in privileged mode
     && sed -i '/tty/d' /etc/inittab \
     # can't set hostname since docker sets it
-    && sed -i 's/hostname $opts/# hostname $opts/g' /etc/init.d/hostname \
+    # && sed -i 's/hostname $opts/# hostname $opts/g' /etc/init.d/hostname \
     # can't mount tmpfs since not privileged
     && sed -i 's/mount -t tmpfs/# mount -t tmpfs/g' /lib/rc/sh/init.sh \
     # install open-vm-tools
